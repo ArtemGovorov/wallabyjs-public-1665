@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.nyc_output/": true,
+    "**/node_modules/": true,
+
+    "lerna-debug.log": true,
+    "packages/*/coverage/": true,
+  }
+}

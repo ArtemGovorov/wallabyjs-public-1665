@@ -1,0 +1,28 @@
+{
+  "name": "@package/app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "nyc mocha --opts ../mocha-config/mocha.opts"
+  },
+  "dependencies": {
+    "@package/environment": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "nyc": "^11.8.0"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "check-coverage": true,
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  }
+}

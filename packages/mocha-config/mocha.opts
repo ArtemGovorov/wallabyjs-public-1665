@@ -1,0 +1,4 @@
+--require babel-polyfill
+--compilers js:babel-register
+--require @package/mocha-config/setup.js
+./src/**/*.test.js

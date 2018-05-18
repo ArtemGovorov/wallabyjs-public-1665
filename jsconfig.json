@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "app/*": ["packages/app/*"],
+      "*": [
+        "*",
+        "packages/*",
+        "node_modules/*"
+      ]
+    }
+  }
+}
