@@ -31,13 +31,7 @@ module.exports = wallaby => ({
 
   setup: () => {
     // Configure module aliases
-    if (!global._moduleAliasesRegistered) {
-      const { delimeter, join } = require('path');
-      const tsConfigPaths = require('tsconfig-paths');
-      const { compilerOptions: { baseUrl, paths }} = require('./jsconfig.json');
-      tsConfigPaths.register({ baseUrl, paths });
-      global._moduleAliasesRegistered = true;
-    }
+    require('module-alias').addAliases({ '@package': w.projectCacheDir + '/packages' });
 
     require('babel-polyfill');
     require('./packages/mocha-config/setup')
